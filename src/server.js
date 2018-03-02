@@ -1,9 +1,17 @@
-import express from 'express'
-import setupMiddware from './middleware'
-import { restRouter } from './api'
-import { connect } from './db'
-import { signin, protect } from './api/modules/auth'
+import express from 'express';
 // Declare an app from express
-const app = null
+const app = express();
 
-export default app
+app.get('/', (req, res) => {
+    res.json({'loaded': true});
+});
+
+app.get('/test', (req, res) => {
+    res.json({'test': true});
+});
+
+app.listen(3001, () => {
+    console.log('http://localhost:3001');
+});
+
+export default app;
