@@ -10,8 +10,5 @@ app.get('/test', (req, res) => {
     res.json({'test': true});
 });
 
-app.listen(3001, () => {
-    console.log('http://localhost:3001');
-});
 
 export default app;
